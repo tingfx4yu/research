@@ -137,7 +137,7 @@ class StatusHandler(tornado.websocket.WebSocketHandler):
         
         if args.model == 'None':
             action = self.agent.select_action(observation,end_episode)
-            self.agent.step(observation,action,reward,end_episode,0.5,0.5)
+            self.agent.step(observation,action,reward,end_episode,0.5)
         print(action,'\n', reward)
         self.send_action(action)
 
